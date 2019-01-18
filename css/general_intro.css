@@ -1,0 +1,185 @@
+/********************************************************************************************
+*	
+*	Desarrollador: Lic. En I.A. Alejandro González Ryes
+*	Versión: :1.0
+*	Fecha: 24-Nov-2013
+*	Producto: Biblioteca Digital - PSEDUCA IT
+*	Proyecto correspondiente a la Maestría en Comunicación con Medios Virtuales - ICONOS
+*	Materia: Diseño de Interfaces Enriquecidas;
+*	Email: alejandro.gonzalez.reyes@outlook.com
+*
+*******************************************************************************************/
+
+@font-face{
+	font-family: "Antonio-Regular";
+	src: url("../fonts/antonio-regular/antonio.eot");
+	src: url("../fonts/antonio-regular/antonio.eot?#iefix") format("embedded-opentype"),
+		 url("../fonts/antonio-regular/antonio.ttf") format("truetype"),
+		 url("../fonts/antonio-regular/antonio.svg#Antonio-Regular") format("svg"),
+		 url("../fonts/antonio-regular/antonio.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face{
+	font-family: "Antonio-Light";
+	src: url("../fonts/antonio-light/antonio.eot");
+	src: url("../fonts/antonio-light/antonio.eot?#iefix") format("embedded-opentype"),
+		 url("../fonts/antonio-light/antonio.ttf") format("truetype"),
+		 url("../fonts/antonio-light/antonio.svg#Antonio-Light") format("svg"),
+		 url("../fonts/antonio-light/antonio.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+*{
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	border: 0;
+	box-sizing: border-box;
+	list-style-type: none;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	text-decoration: none;
+}
+body, html{
+	background-color: #F6F6F6;
+	color: #666666;
+	font-family: "Antonio-Regular", Arial;
+	font-size: 16px;
+	min-height: 100%;
+	padding-bottom: 8em;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+}
+header{
+	width: 65%;
+	margin: 3em auto;
+}
+header h1{
+	border-bottom: 1px solid #888888;
+	border-top: 1px solid #888888;
+	padding: .5em;
+	text-transform: uppercase;
+}
+header figure{
+	margin-top: 3em;
+}
+header figure img{
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+}
+a{
+	-moz-transition: all .5s ease-in-out;
+	-ms-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+	-webkit-transition: all .5s ease-in-out;
+	background-color: #f60;
+	border-radius: .5em;
+	color: #fff;
+	cursor: pointer;
+	font-family: "Antonio-Regular";
+	font-size: 1em;
+	padding: .5em;
+	transition: all .5s ease-in-out;
+}
+a:hover{
+	-webkit-box-shadow: 0 0 1em #f60;
+	background-color: #f30;
+	box-shadow: 0 0 1em #f60;
+}
+footer{
+	bottom: 0;
+	font-family: "Antonio-Light", Arial;
+	font-size: .9em;
+	padding-bottom: 2em;
+	position: absolute;
+	width: 100%;
+}
+footer address{
+	font-style: normal;
+}
+
+/*** Declaración de Media Queries para diseño Responsivo ***/
+@media screen and (min-width: 1025px) and (max-width: 1200px){
+	header{
+		margin: 2em auto 2.5em auto;
+		width: 70%;
+	}
+	header h1{
+		padding: .5em 0;
+	}
+	header figure{
+		margin-top: 2em;
+	}
+}
+@media screen and (min-width: 769px) and (max-width: 1024px){
+	header{
+		margin: 2em auto 2.5em auto;
+		width: 80%;
+	}
+	header h1{
+		padding: .5em 0;
+	}
+	header figure{
+		margin-top: 2em;
+	}
+}
+@media screen and (min-width: 601px) and (max-width: 768px){
+	header{
+		margin: 2em auto 2.5em auto;
+		width: 90%;
+	}
+	header h1{
+		padding: .5em 0;
+	}
+	header figure{
+		margin-top: 2em;
+	}
+}
+@media screen and (min-width: 481px) and (max-width: 600px){
+	header{
+		margin: 2em auto 2.5em auto;
+		width: 90%;
+	}
+	header h1{
+		padding: .5em 0;
+	}
+	header figure{
+		margin-top: 2em;
+	}
+}
+@media screen and (min-width: 321px) and (max-width: 480px){
+	header{
+		margin: 2em auto 2.5em auto;
+		width: 90%;
+	}
+	header h1{
+		padding: .5em 0;
+	}
+	header figure{
+		margin-top: 2em;
+	}
+	footer{
+		padding-bottom: 1em;
+	}
+}
+@media screen and (min-width: 0px) and (max-width: 320px){
+	header{
+		margin: 2em auto 2.5em auto;
+		width: 95%;
+	}
+	header h1{
+		padding: .5em 0;
+		font-size: 1.4em;
+	}
+	header figure{
+		margin-top: 2em;
+	}
+	footer{
+		padding-bottom: 1em;
+	}
+}
+/*** Termina declaración de Media Queries para diseño Responsivo ***/

@@ -1,0 +1,1200 @@
+/********************************************************************************************
+*	
+*	Desarrollador: Lic. En I.A. Alejandro González Ryes
+*	Versión: :1.0
+*	Fecha: 24-Nov-2013
+*	Producto: Biblioteca Digital - PSEDUCA IT
+*	Proyecto correspondiente a la Maestría en Comunicación con Medios Virtuales - ICONOS
+*	Materia: Diseño de Interfaces Enriquecidas;
+*	Email: alejandro.gonzalez.reyes@outlook.com
+*
+*******************************************************************************************/
+
+@font-face{
+	font-family: "Antonio-Regular";
+	src: url("../fonts/antonio-regular/antonio.eot");
+	src: url("../fonts/antonio-regular/antonio.eot?#iefix") format("embedded-opentype"),
+		 url("../fonts/antonio-regular/antonio.ttf") format("truetype"),
+		 url("../fonts/antonio-regular/antonio.svg#Antonio-Regular") format("svg"),
+		 url("../fonts/antonio-regular/antonio.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face{
+	font-family: "Antonio-Light";
+	src: url("../fonts/antonio-light/antonio.eot");
+	src: url("../fonts/antonio-light/antonio.eot?#iefix") format("embedded-opentype"),
+		 url("../fonts/antonio-light/antonio.ttf") format("truetype"),
+		 url("../fonts/antonio-light/antonio.svg#Antonio-Light") format("svg"),
+		 url("../fonts/antonio-light/antonio.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face{
+	font-family: "Capsuula";
+	src: url("../fonts/capsuula/capsuula.eot");
+	src: url("../fonts/capsuula/capsuula.eot?#iefix") format("embedded-opentype"),
+		 url("../fonts/capsuula/capsuula.ttf") format("truetype"),
+		 url("../fonts/capsuula/capsuula.svg#Capsuula") format("svg"),
+		 url("../fonts/capsuula/capsuula.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+*{
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	border: 0;
+	box-sizing: border-box;
+	list-style-type: none;
+	margin: 0;
+	outline: none;
+	padding: 0;
+	text-decoration: none;
+}
+body, html{
+	background-color: #F6F6F6;
+	color: #666666;
+	font-family: "Antonio-Regular", Arial;
+	font-size: 16px;
+	position: relative;
+	text-align: center;
+}
+#sesion-administrador{
+	background-color: #222222;
+	color: #FFFFFF;
+	display: none;
+	padding: .5em 0 .7em 0;
+}
+#sesion-administrador form{
+	margin: 0 auto;
+	text-align: right;
+	width: 65%;
+}
+#sesion-administrador form div{
+	display: inline-block;
+	vertical-align: bottom;
+}
+#sesion-administrador form div:nth-child(2){
+	margin: 0 .4em;
+}
+#sesion-administrador form label, #contenedor #frm_registro_usuarios label, #contenedor #frm_buscador label{
+	color: #FFFFFF;
+	cursor: pointer;
+	display: block;
+	text-align: left;
+}
+#sesion-administrador form input, #contenedor #frm_contacto_usuarios input{
+	background-color: #515151;
+	border-radius: .2em;
+	color: #EDEDF0;
+	padding: .4em;
+}
+#sesion-administrador form input:focus, #contenedor #frm_contacto_usuarios input:focus, #contenedor #frm_contacto_usuarios textarea:focus{
+	background-color: #EDEDF0;
+	color: #515151
+}
+#sesion-administrador form input[type="submit"]{
+	background-color: #FF6600;
+	color: #FFFFFF;
+	cursor: pointer;
+	padding: .4em 1em;
+}
+#sesion-administrador form input[type="submit"]:hover, #contenedor #frm_registro_usuarios input[type="submit"]:hover, #contenedor #frm_buscador input[type="submit"]:hover{
+	background-color: #FFBC33;
+	color: #222222;
+}
+#mostrar-sesion-administrador{
+	margin: 0 auto;
+	text-align: right;
+	width: 65%;
+}
+#mostrar-sesion-administrador span{
+	background-color: #222222;
+	border-radius: 0 0 .5em .5em;
+	color: #FFFFFF;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 1em;
+	padding: .4em 1.5em;
+}
+#mostrar-sesion-administrador span:hover{
+	background-color: #464646;
+}
+#logobiblioteca{
+	display: none;
+}
+#menu{
+	margin: 0 auto 1em auto;
+	width: 65%;
+}
+#menu ul li{
+	display: inline-block;
+	vertical-align: middle;
+}
+#menu ul li a{
+	background-color: #FF6600;
+	color: #FFFFFF;
+	cursor: pointer;
+	display: block;
+	padding: .3em 2em;
+}
+#menu ul li:nth-child(1) a, #menu ul li:nth-child(4) a{
+	border-right: 1px dashed #FFFFFF;
+}
+#menu ul li:nth-child(1) a{
+	border-radius: .3em 0 0 .3em;
+}
+#menu ul li:nth-child(5) a{
+	border-radius: 0 .3em .3em 0
+}
+#menu ul li.logo a{
+	background-color: #F6F6F6;
+	border-radius: .5em;
+	border: 3px solid #FF6600;
+}
+#menu ul li.logo a:hover{
+	background-color: #FFFFFF;
+}
+#menu ul li a:hover{
+	background-color: #FFBC33;
+	color: #222222;
+}
+
+/*** Slider CSS - Meteor Slideshow Wordpress ***/
+#slideshow{
+	margin: 0 auto;
+	width: 65%;
+}
+#slideshow #meteor-slideshow img{
+	display: block;
+	max-width: 100%;
+}
+/*** Termina Slider CSS - Meteor Slideshow Wordpress ***/
+
+#contenedor{
+	background-color: #464646;
+	border-top: 3px solid #FFBC33;
+	-webkit-box-shadow: 0 0 3em #FFBC33;
+	box-shadow: 0 0 3em #FFBC33;
+	color: #FFFFFF;
+	font-family: "Capsuula", Arial;
+	min-height: 400px;
+	padding: 1em 0;
+}
+#contenedor #bienvenidos, #contenedor #empresa article, #contenedor #biblioteca, #contenedor #contacto, #contenedor #localizacion, #contenedor #quienes_somos, #contenedor #colaboradores, #contenedor #buscador_libros, #contenedor #frm_registro_usuarios, #biblioteca .paginador ul li, #biblioteca figure img, #biblioteca figure figcaption, #pie section{
+	display: inline-block;
+	vertical-align: top;
+}
+#contenedor #bienvenidos, #contenedor #biblioteca{
+	margin-right: .5%;
+	width: 45%;
+}
+#contenedor #empresa{
+	margin: 0 auto;
+	width: 65%;
+}
+#contenedor #empresa article{
+	text-align: left;
+	width: 32.666%;
+}
+#contenedor #frm_registro_usuarios, #contenedor #buscador_libros{
+	margin-left: .5%;
+	padding: 0 0 0 0em;
+	width: 19%;
+}
+#contenedor #quienes_somos{
+	width: 20%;
+}
+#contenedor #colaboradores{
+	width: 44%;
+}
+#contenedor #contacto, #contenedor #localizacion{
+	width: 32%;
+}
+#contenedor #contacto, #contenedor #quienes_somos{
+	margin-right: .5%;
+}
+#contenedor #localizacion, #contenedor #colaboradores{
+	margin-left: .5%;
+}
+#contenedor #bienvenidos h2, #contenedor #biblioteca h2, #contenedor #empresa article h2, #contenedor #buscador_libros h2, #contenedor #quienes_somos h2, #contenedor #colaboradores h2{
+	color: #FFBC33;
+	font-size: 1.5em;
+	margin-bottom: .5em;
+	text-align: left;
+}
+#contenedor #bienvenidos p, #contenedor #quienes_somos p, #contenedor #biblioteca p{
+	line-height: 1.5em;
+	margin-bottom: .5em;
+	text-align: justify;
+	text-indent: 1.5em;
+}
+#contenedor #empresa h2{
+	border-bottom: 1px solid #FFBC33;
+}
+#contenedor #empresa img{
+	background-color: #FFFFFF;
+	border-radius: .3em;
+	display: block;
+	margin: 1em 0;
+	max-width: 100%;
+	padding: .5em;
+}
+#contenedor #colaboradores a{
+	display: inline-block;
+	margin: 0 .5% 1em .5%;
+	overflow: hidden;
+	position: relative;
+	vertical-align: top;
+	width: 49%;
+}
+#contenedor #colaboradores img{
+	background-color: #fff;
+	border-radius: .3em;
+	cursor: pointer;
+	display: block;
+	max-height: 100%;
+	max-width: 100%;
+	padding: .6em;
+}
+#contenedor #colaboradores figcaption{
+	background-color: #222;
+	border-radius: 0 0 .3em .3em;
+	border-top: none;
+	border: .6em solid #fff;
+	bottom: -7em;
+	color: #fff;
+	opacity: .9;
+	padding: .6em;
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+}
+#contenedor #localizacion iframe{
+	width: 100%;
+}
+#contenedor #localizacion fieldset a:not(#masinfoloc){
+	background-color: #f60;
+	border-radius: .3em;
+	color: #FFFFFF;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 1em;
+	margin-top: 1em;
+	padding: .3em 1em;
+}
+#contenedor #localizacion fieldset a:not(#masinfoloc):hover{
+	background-color: #FFBC33;
+	color: #000000;
+}
+#contenedor #localizacion #masinfoloc{
+	color: #18BCFC;
+	cursor: pointer;
+	display: block;
+	font-weight: normal;
+	margin-bottom: .5em;
+	text-align: left;
+	width: 100%;
+}
+#contenedor #localizacion #masinfoloc:hover{
+	color: #FFBC33;
+}
+#contenedor #localizacion #infoloc{
+	color: #fff;
+	display: none;
+	font-weight: normal;
+	margin: 0 0 .5em 0;
+	text-align: left;
+}
+#contenedor #frm_buscador{
+	margin-bottom: 1em;
+}
+#contenedor #frm_registro_usuarios fieldset, #contenedor #frm_buscador fieldset, #contenedor #frm_contacto_usuarios fieldset, #contenedor #localizacion fieldset{
+	border-radius: .3em;
+	border: 1px solid #EEEEEE;
+	color: #FFBC33;
+	padding: 1em;
+}
+#contenedor #frm_registro_usuarios legend, #contenedor #frm_buscador legend{
+	font-weight: bold;
+}
+#contenedor #frm_contacto_usuarios legend, #contenedor #localizacion legend{
+	font-size: 1.5em;
+	font-weight: bold;
+}
+#contenedor #frm_contacto_usuarios fieldset, #contenedor #localizacion fieldset{
+	background-color: #222222;
+	min-height: 540px;
+}
+#contenedor #frm_contacto_usuarios div{
+	color: #fff;
+	font-size: 1em;
+	font-weight: normal;
+}
+#contenedor #frm_contacto_usuarios label{
+	cursor: pointer;
+	display: block;
+	text-align: left;
+}
+#contenedor #frm_registro_usuarios input, #contenedor #frm_buscador input, #contenedor #frm_contacto_usuarios input{
+	border-radius: .3em;
+	margin-bottom: 1em;
+	padding: .4em;
+	width: 100%;
+}
+#contenedor #frm_contacto_usuarios textarea{
+	background-color: #515151;
+	border-radius: .3em;
+	color: #EDEDF0;
+	height: 200px;
+	margin-bottom: 1em;
+	padding: .4em;
+	resize: none;
+	width: 100%;
+}
+#contenedor #frm_registro_usuarios input[type="submit"], #contenedor #frm_buscador input[type="submit"], #contenedor #frm_contacto_usuarios input[type="submit"]{
+	background-color: #F60;
+	color: #FFF;
+	cursor: pointer;
+	margin-bottom: 0;
+	padding: .5em 1em;
+	width: auto;
+}
+#contenedor #frm_registro_usuarios input[type="submit"]:hover, #contenedor #frm_buscador input[type="submit"]:hover, #contenedor #frm_contacto_usuarios input[type="submit"]:hover{
+	background-color: #FFBC33;
+	color: #000000;
+}
+#contenedor #biblioteca #libros{
+	border-spacing: 0;
+	width: 100%;
+}
+#contenedor #biblioteca #libros tr{
+	vertical-align: top;
+}
+#contenedor #biblioteca #libros td{
+	border-bottom-color: transparent;
+	border-bottom-style: solid;
+	border-bottom-width: 2em;
+}
+#contenedor #biblioteca #libros img{
+	background-color: #fff;
+	border-radius: .3em;
+	border: 1px solid #222;
+	-webkit-box-shadow: 0 0 5px #fff;
+	box-shadow: 0 0 5px #fff;
+	margin-right: 1em;
+	padding: .4em;
+}
+#contenedor #biblioteca #libros h3{
+	margin-bottom: .5em;
+	text-align: left;
+}
+#contenedor #biblioteca #libros h3 a{
+	color: #FFBC33;
+}
+#contenedor #biblioteca #libros h3 a:hover{
+	color: #18BCFC;
+	text-decoration: underline;
+}
+#contenedor #biblioteca .paginador ul li{
+	margin: 1em .1em;
+}
+#contenedor #biblioteca .paginador ul li a.habilitar{
+	background-color: #f60;
+	border-radius: .3em;
+	border: 1px solid #fff;
+	color: #fff;
+	cursor: pointer;
+	padding: .3em 1em;
+}
+#contenedor #biblioteca .paginador ul li a.habilitar:hover{
+	background-color: #FFBC33;
+	color: #000;
+}
+#contenedor #biblioteca .paginador ul li a.deshabilitar{
+	background-color: #222;
+	border-radius: .3em;
+	border: 1px solid #fff;
+	color: #fff;
+	cursor: auto;
+	padding: .3em 1em;
+}
+#contenedor #biblioteca figure img{ 
+	width: 30%;
+}
+#contenedor #biblioteca figure figcaption{
+	width: 70%;
+}
+#contenedor #biblioteca h3{
+	color: #18BCFC;
+	margin-bottom: .5em;
+	text-align: left;
+}
+#contenedor #biblioteca figure img{
+	background-color: #fff;
+	border-radius: .3em;
+	border: 1px solid #222;
+	-webkit-box-shadow: 0 0 10px #fff;
+	box-shadow: 0 0 10px #fff;
+	padding: .3em;
+}
+#contenedor #biblioteca figure figcaption{
+	padding-left: 1em;
+	text-align: left;
+}
+#contenedor #biblioteca figure figcaption h4{
+	border-bottom: 1px solid #ccc;
+	color: #FFBC33;
+	margin-bottom: 1em;
+}
+#contenedor #biblioteca figure figcaption div p{
+	line-height: 1.3em;
+	text-align: justify;
+	text-indent: 1.5em;
+}
+#contenedor #biblioteca figure figcaption ul li a{
+	color: #18BCFC;
+}
+#contenedor #biblioteca figure figcaption ul li a:hover{
+	color: #FFBC33;
+}
+#contenedor #buscador_libros #acordion{
+	text-align: left;
+}
+#contenedor #buscador_libros #acordion h4{
+	background-color: #FFBC33;
+	border-radius: .2em;
+	border: 1px dashed #fff;
+	color: #222;
+	cursor: pointer;
+	font-size: 1em;
+	line-height: 1em;
+	margin-top: 3px;
+	padding: .5em;
+}
+#contenedor #buscador_libros #acordion div{
+	background-color: #000;
+	border-radius: 0 0 .2em .2em;
+	border-top: none;
+	border: 1px dashed #fff;
+	padding: .5em;
+}
+#pie{
+	background-color: #222222;
+	color: #FFFFFF;
+	font-family: "Capsuula", Arial;
+	padding: 1.5em 0;
+}
+#pie section{
+	text-align: left;
+	width: 21%;
+}
+#pie section:nth-child(2), #contenedor #empresa article:nth-child(2){
+	margin: 0 1%;
+}
+#pie section h3{
+	color: #FFBC33;
+	margin-bottom: .5em;
+}
+#pie section img{
+	margin-top: 1em;
+	max-width: 80%;
+}
+#pie section a{
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 32px;
+	margin: 1em .5em 0 0;
+	width: 32px;
+}
+#pie section a.facebook{background-image: url("../assets/img/icon-facebook.png");}
+#pie section a.feed{background-image: url("../assets/img/icon-feed.png");}
+#pie section a.youtube{background-image: url("../assets/img/icon-youtube.png");}
+#pie section a.twitter{background-image: url("../assets/img/icon-twitter.png");}
+#pie section a.facebook:hover{
+	background-image: url("../assets/img/icon-facebook.png");
+	background-position: 0px -32px;
+}
+#pie section a.feed:hover{
+	background-image: url("../assets/img/icon-feed.png");
+	background-position: 0px -32px;
+}
+#pie section a.youtube:hover{
+	background-image: url("../assets/img/icon-youtube.png");
+	background-position: 0px -32px;
+}
+#pie section a.twitter:hover{
+	background-image: url("../assets/img/icon-twitter.png");
+	background-position: 0px -32px;
+}
+#pie section a span{
+	display: none;
+}
+#pie section form{
+	margin-top: 1em;
+	text-align: center;
+}
+#pie section form input{
+	border-radius: .3em;
+	margin-bottom: 1em;
+	padding: .4em;
+	width: 62%;
+}
+#pie section form input[type="submit"]{
+	cursor: pointer;
+	width: 33%;
+}
+#pie section form input[type="submit"]:hover{
+	background-color: #FFBC33;
+}
+
+/*** Estilo para Flecha Estilo Parallax ***/
+.flecha{
+	bottom: 1em;
+	cursor: pointer;
+	display: none;
+	position: fixed;
+	right: 1em;
+}
+/*** Termina Estilo para Flecha Estilo Parallax ***/
+
+.oculto{
+	display: none;
+}
+.cambio{
+	-moz-transition: all .5s ease-in-out;
+	-ms-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+	-webkit-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+}
+
+/*** Plugin Toltip CSS3 ***/
+.tip {
+	background:#1d1d1d;
+	border-radius: 3px;
+	-webkit-box-shadow: 0 0 5px #FFF;
+	box-shadow: 0 0 5px #FFF;
+	color: #FFBC33;
+	display:none;
+	font-size: .8em;
+	font-weight: normal;
+	padding: 10px;
+	position:absolute;
+	z-index:1000;
+	width: 350px;
+}
+/*** Termina Plugin Toltip CSS3 ***/
+
+/*** Declaración de Media Queries para diseño Responsivo ****/
+@media screen and (min-width: 1025px) and (max-width: 1200px){
+	/*body, html{
+		background-color: #00DBE2;
+	}*/
+	#sesion-administrador form{
+		width: 70%;
+	}#mostrar-sesion-administrador{
+		width: 70%;
+	}
+	#menu{
+		margin: 0 auto 1em auto;
+		width: 70%; 
+	}
+	/*** Slider CSS - Meteor Slideshow Wordpress ***/
+	#slideshow{
+		width: 70%;
+	}
+	/*** Termina Slider CSS - Meteor Slideshow Wordpress ***/
+	#contenedor #bienvenidos, #contenedor #biblioteca{
+		width: 45%;
+	}
+	#contenedor #frm_registro_usuarios, #contenedor #buscador_libros{
+		margin-left: -.5%;
+		padding-left: 1%;
+		padding: 0 0 0 .5em;
+		width: 25%;
+	}
+	#contenedor #empresa{
+		margin: 1em auto 0 auto;
+		width: 70%;
+	}
+	#contenedor #quienes_somos{
+		width: 24.5%;
+	}
+	#contenedor #colaboradores{
+		width: 45%;
+	}
+	#contenedor #contacto, #contenedor #localizacion{
+		width: 34.5%;
+	}
+	#contenedor #contacto, #contenedor #quienes_somos{
+		margin-right: .5%;
+	}
+	#contenedor #localizacion, #contenedor #colaboradores{
+		margin-left: .5%;
+	}
+	#pie section{
+		width: 22.6%;
+	}
+}
+@media screen and (min-width: 769px) and (max-width: 1024px){
+	/*body, html{
+		background-color: peru;
+	}*/
+	#sesion-administrador form{
+		width: 81%;
+	}#mostrar-sesion-administrador{
+		width: 81%;
+	}
+	#menu{
+		margin: 0 auto 1em auto;
+		width: 81%; 
+	}
+	#menu ul li a{
+		padding: .3em 1.6em;
+	}
+	/*** Slider CSS - Meteor Slideshow Wordpress ***/
+	#slideshow{
+		width: 81%;
+	}
+	/*** Termina Slider CSS - Meteor Slideshow Wordpress ***/
+	#contenedor #bienvenidos, #contenedor #biblioteca{
+		width: 55%;
+	}
+	#contenedor #frm_registro_usuarios, #contenedor #buscador_libros{
+		margin-left: 0;
+		padding: 0 0 0 .5em;
+		width: 25%;
+	}
+	#contenedor #empresa{
+		margin: 1em auto 0 auto;
+		width: 80%;
+	}
+	#contenedor #quienes_somos{
+		width: 30%;
+	}
+	#contenedor #colaboradores{
+		width: 50%;
+	}
+	#contenedor #contacto, #contenedor #localizacion{
+		width: 40%;
+	}
+	#contenedor #contacto, #contenedor #quienes_somos{
+		margin-right: .5%;
+	}
+	#contenedor #localizacion, #contenedor #colaboradores{
+		margin-left: .5%;
+	}
+	#pie section{
+		width: 26.3%;
+	}
+}
+@media screen and (min-width: 601px) and (max-width: 768px){
+	/*body, html{
+		background-color: pink;
+	}*/
+	#sesion-administrador form{
+		width: 90%;
+	}#mostrar-sesion-administrador{
+		width: 90%;
+	}
+	#mostrar-sesion-administrador span{
+		border-radius: 0 0 .4em .4em;
+		padding: .2em .5em;
+	}
+	#menu{
+		margin: 0 auto 1em auto;
+		width: 90%; 
+	}
+	#menu ul li a{
+		padding: .3em 1.2em;
+	}
+	/*** Slider CSS - Meteor Slideshow Wordpress ***/
+	#slideshow{
+		width: 90%;
+	}
+	/*** Termina Slider CSS - Meteor Slideshow Wordpress ***/
+	#contenedor #bienvenidos, #contenedor #biblioteca{
+		width: 55%;
+	}
+	#contenedor #frm_registro_usuarios, #contenedor #buscador_libros{
+		margin-left: 0;
+		padding: 0 0 0 .5em;
+		width: 35%;
+	}
+	#contenedor #empresa{
+		margin: 1em auto 0 auto;
+		width: 90%;
+	}
+	#contenedor #contacto, #contenedor #localizacion, #contenedor #quienes_somos, #contenedor #colaboradores, #contenedor #biblioteca, #contenedor #buscador_libros{
+		display: block;
+		margin: 0 auto;
+	}
+	#contenedor #contacto, #contenedor #localizacion, #contenedor #quienes_somos, #contenedor #colaboradores, #contenedor #biblioteca, #contenedor #buscador_libros{
+		margin: 0 auto 1em auto;
+		width: 90%;
+	}
+	#contenedor #frm_contacto_usuarios fieldset, #contenedor #localizacion fieldset{
+		min-height: 0px;
+	}
+	#contenedor #libros{
+		display: block;
+		margin: 0 auto;
+	}
+	#contenedor #buscador_libros #frm_buscador, #contenedor #buscador_libros #acordion{
+		display: inline-block;
+		margin-bottom: 0;
+		vertical-align: top;
+		width: 49.5%;
+	}
+	#contenedor #biblioteca .paginador ul li{
+		margin: .5em .1em;
+	}
+	#contenedor #buscador_libros{
+		padding-left: 0;
+	}
+	#contenedor #buscador_libros h2{
+		display: none;
+	}
+	#contenedor #buscador_libros #acordion{
+		padding-left: .5em;
+		padding-top: .5em;
+	}
+	#contenedor #biblioteca figure{
+		margin-bottom: 1em; 
+		width: 100%;
+	}
+	#contenedor #biblioteca figure img{
+		margin-bottom: 1em;
+	}
+	#pie section{
+		width: 30%;
+	}
+}
+@media screen and (min-width: 481px) and (max-width: 600px){
+	/*body, html{
+		background-color: purple;
+	}*/
+	#sesion-administrador form{
+		text-align: center;
+		width: 90%;
+	}
+	#mostrar-sesion-administrador{
+		width: 100%;
+	}
+	#mostrar-sesion-administrador span{
+		border-radius: 0 0 .4em .4em;
+		padding: .2em .5em;
+	}
+	#menu{
+		margin: 0 auto 1em auto;
+		width: 100%;
+	}
+	#menu ul li a{
+		padding: .3em .9em;
+	}
+	/*** Slider CSS - Meteor Slideshow Wordpress ***/
+	#slideshow{
+		width: 100%;
+	}
+	/*** Termina Slider CSS - Meteor Slideshow Wordpress ***/
+	#contenedor #bienvenidos, #contenedor #biblioteca{
+		width: 50%;
+	}
+	#contenedor #frm_registro_usuarios, #contenedor #buscador_libros{
+		margin-left: 0;
+		padding: 0 0 0 .5em;
+		width: 40%;
+	}
+	#contenedor #contacto, #contenedor #localizacion, #contenedor #quienes_somos, #contenedor #colaboradores, #contenedor #biblioteca, #contenedor #buscador_libros{
+		display: block;
+		margin: 0 auto;
+	}
+	#contenedor #contacto, #contenedor #localizacion, #contenedor #quienes_somos, #contenedor #colaboradores, #contenedor #biblioteca, #contenedor #buscador_libros{
+		margin: 0 auto 1em auto;
+		width: 90%;
+	}
+	#contenedor #frm_contacto_usuarios fieldset, #contenedor #localizacion fieldset{
+		min-height: 0px;
+	}
+	#contenedor #empresa{
+		margin: 1em auto 0 auto;
+		width: 90%;
+	}
+	#contenedor #libros{
+		display: block;
+		margin: 0 auto;
+	}
+	#contenedor #buscador_libros #frm_buscador, #contenedor #buscador_libros #acordion{
+		display: inline-block;
+		margin-bottom: 0;
+		vertical-align: top;
+		width: 49.5%;
+	}
+	#contenedor #biblioteca .paginador ul li{
+		margin: .5em .1em;
+	}
+	#contenedor #buscador_libros{
+		padding-left: 0;
+	}
+	#contenedor #buscador_libros h2{
+		display: none;
+	}
+	#contenedor #buscador_libros #acordion{
+		padding-left: .5em;
+		padding-top: .5em;
+	}
+	#contenedor #biblioteca figure{
+		margin-bottom: 1em; 
+		width: 100%;
+	}
+	#contenedor #biblioteca figure img{
+		margin-bottom: 1em;
+	}
+	#pie section:nth-child(1){
+		display: none;
+	}
+	#pie section{
+		width: 45%;
+	}	
+}
+@media screen and (min-width: 321px) and (max-width: 480px){
+	/*body, html{
+		background-color: orange;
+	}*/
+	#sesion-administrador form{
+		text-align: center;
+		width: 90%;
+	}
+	#mostrar-sesion-administrador{
+		width: 100%;
+	}
+	#mostrar-sesion-administrador span{
+		border-radius: 0 0 .4em .4em;
+		padding: .2em .5em;
+	}
+	#logobiblioteca{
+		display: block;
+		margin: 0 auto 1em auto;
+		max-width: 65%;
+	}
+	#menu{
+		margin: 0 auto 1em auto;
+		width: 100%;
+	}
+	#menu ul li a{
+		border-right: 1px dashed #FFFFFF;
+		padding: .3em .8em;
+	}
+	#menu ul li:nth-child(5) a{
+		border-radius: 0 .3em .3em 0;
+		border-right: none;
+	}
+	#menu ul li.logo a{
+		display: none;
+	}
+	/*** Slider CSS - Meteor Slideshow Wordpress ***/
+	#slideshow{
+		width: 100%;
+	}
+	/*** Termina Slider CSS - Meteor Slideshow Wordpress ***/
+	#contenedor #bienvenidos, #contenedor #empresa article, #contenedor #biblioteca, #contenedor #contacto, #contenedor #localizacion, #contenedor #quienes_somos, #contenedor #colaboradores, #contenedor #buscador_libros, #contenedor #frm_registro_usuarios, #pie section{
+		display: block;
+		margin: 0 auto;
+	}
+	#contenedor #bienvenidos, #contenedor #biblioteca, #contenedor #contacto, #contenedor #localizacion, #contenedor #quienes_somos{
+		margin-right: 0;
+		margin: 0 auto;
+		width: 90%;
+	}
+	#contenedor #frm_registro_usuarios, #contenedor #buscador_libros, #contenedor #colaboradores{
+		margin-left: 0;
+		margin: 0 auto;
+		width: 90%;
+	}
+	#contenedor #contacto, #contenedor #localizacion{
+		margin-bottom: 1em;
+	}
+	#contenedor #empresa{
+		margin: 1em auto 0 auto;
+		width: 90%;
+	}
+	#contenedor #empresa article{
+		text-align: left;
+		width: 100%;
+	}
+	#contenedor #empresa figure img, #contenedor #empresa figure figcaption{
+		display: inline-block;
+		vertical-align: top;
+		width: 49.4%;
+	}
+	#contenedor #empresa figure img{
+		margin-top: 0;
+	}
+	#contenedor #empresa figure figcaption{
+		padding-left: .5em;
+		text-align: justify;
+	}
+	#contenedor #frm_registro_usuarios fieldset, #contenedor #localizacion fieldset, #contenedor #frm_buscador fieldset, #contenedor #frm_contacto_usuarios fieldset{
+		background-color: #FF6600;
+		min-height: 0px;
+	}
+	#contenedor #frm_registro_usuarios legend, #contenedor #frm_contacto_usuarios legend, #contenedor #localizacion legend, #contenedor #frm_buscador legend{
+		color: #FFFFFF;
+		text-shadow: 0 0 1px #000;
+	}
+	#contenedor #localizacion #masinfoloc{
+		color: #fff;
+		font-weight: bold;
+	}
+	#contenedor #localizacion #masinfoloc:hover{
+		color: #222;
+	}
+	#contenedor #localizacion #infoloc{
+		background-color: #FFFFFF;
+		border-radius: .3em;
+		color: #222222;
+		padding: .4em;
+	}
+	#contenedor #frm_registro_usuarios input[type="submit"], #contenedor #frm_buscador input[type="submit"], #contenedor #frm_contacto_usuarios input[type="submit"], #contenedor #localizacion fieldset a:not(#masinfoloc){
+		background-color: #FFBC33;
+		color: #222222;
+	}
+	#contenedor #frm_registro_usuarios input[type="submit"]:hover, #contenedor #frm_buscador input[type="submit"]:hover, #contenedor #frm_contacto_usuarios input[type="submit"]:hover, #contenedor #localizacion fieldset a:not(#masinfoloc):hover{
+		background-color: #222222;
+		color: #FFF;
+	}
+	#contenedor #frm_contacto_usuarios input, #contenedor #frm_contacto_usuarios textarea{
+		background-color: #EEEEEE;
+		border: 1px solid transparent;
+		color: #222;
+	}
+	#contenedor #frm_contacto_usuarios input:focus, #contenedor #frm_contacto_usuarios textarea:focus{
+		background-color: #FFBC33;
+		border: 1px dashed #fff;
+		color: #222;
+	}
+	#contenedor #libros{
+		display: block;
+		margin: 0 auto;
+	}
+	#contenedor #biblioteca .paginador{
+		margin-bottom: 1em;
+	}
+	#contenedor #biblioteca #libros td{
+		border-bottom-width: 1em;
+	}
+	#contenedor #biblioteca .paginador ul li{
+		margin: .5em .1em;
+	}
+	#contenedor #buscador_libros h2{
+		display: none;
+	}
+	#contenedor #buscador_libros #frm_buscador, #contenedor #buscador_libros #acordion{
+		display: inline-block;
+		vertical-align: top;
+		width: 49.5%;
+	}
+	#contenedor #buscador_libros #acordion{
+		padding-left: .5em;
+		padding-top: .5em;
+	}
+	#contenedor #biblioteca figure{
+		margin-bottom: 1em; 
+		width: 100%;
+	}
+	#contenedor #biblioteca figure img{
+		margin-bottom: 1em;
+	}
+	#pie section{
+		display: block;
+		margin: 0 auto;
+		width: 90%;
+	}
+	#pie section:nth-child(2){
+		margin: .5em auto;
+	}
+	#pie section:nth-child(1){
+		display: none;
+	}
+}
+@media screen and (min-width: 0px) and (max-width: 320px){
+	/*body, html{
+		background-color: yellow;
+	}*/
+	#sesion-administrador form{
+		text-align: center;
+		width: 90%;
+	}
+	#sesion-administrador form div{
+		display: block;
+		margin-bottom: .5em;
+	}
+	#sesion-administrador form div:nth-child(2){
+		margin: 0;
+	}
+	#sesion-administrador form label{
+		display: block;
+	}
+	#sesion-administrador form input{
+		width: 100%;
+	}
+	#sesion-administrador form input[type="submit"]{
+		display: block;
+		margin-top: 1em;
+		width: auto;
+	}
+	#mostrar-sesion-administrador{
+		width: 100%;
+	}
+	#mostrar-sesion-administrador span{
+		border-radius: 0 0 .4em .4em;
+		padding: .2em .4em;
+	}
+	#logobiblioteca{
+		display: block;
+		margin: 1em auto;
+		max-width: 90%;
+	}
+	#menu{
+		width: 90%;
+	}
+	#menu ul li{
+		display: block;
+	}
+	#menu ul li a{
+		border-top: none;
+		border: 1px dashed #222222;
+	}
+	#menu ul li:nth-child(1) a, #menu ul li:nth-child(4) a{
+		border-right: 1px dashed #222222;
+	}
+	#menu ul li:nth-child(1) a{
+		border-radius: .3em .3em 0 0;
+		border-top: 1px dashed #222222;
+	}
+	#menu ul li:nth-child(5) a{
+		border-radius: 0 0 .3em .3em
+	}
+	#menu ul li.logo a{
+		display: none;	
+	}
+	/*** Slider CSS - Meteor Slideshow Wordpress ***/
+	#slideshow{
+		display: none;
+	}
+	/*** Termina Slider CSS - Meteor Slideshow Wordpress ***/
+	#contenedor #bienvenidos, #contenedor #empresa article, #contenedor #biblioteca, #contenedor #contacto, #contenedor #localizacion, #contenedor #quienes_somos, #contenedor #colaboradores, #contenedor #buscador_libros, #contenedor #frm_registro_usuarios, #biblioteca figure img, #biblioteca figure figcaption, #pie section{
+		display: block;
+		margin: 0 auto;
+	}
+	#contenedor #bienvenidos, #contenedor #biblioteca, #contenedor #contacto, #contenedor #localizacion, #contenedor #quienes_somos{
+		margin-right: 0;
+		margin: 0 auto;
+		width: 90%;
+	}
+	#contenedor #frm_registro_usuarios, #contenedor #buscador_libros, #contenedor #colaboradores{
+		margin-left: 0;
+		margin: 0 auto;
+		width: 90%;
+	}
+	#empresa, #contenedor #contacto{
+		display: none;
+	}
+	#contenedor #frm_registro_usuarios fieldset, #contenedor #frm_buscador fieldset, #contenedor #frm_contacto_usuarios fieldset{
+		background-color: #FF6600;
+	}
+	#contenedor #localizacion fieldset{
+		background-color: #FFBC33;
+		min-height: 0px;
+	}
+	#contenedor #localizacion legend{
+		background-color: #FFBC33;
+		border-bottom: none;
+		border-radius: .2em .2em 0 0;
+		border: 1px solid #EEEEEE;
+		color: #222222;
+		font-size: 1.1em;
+		padding: .2em .5em;
+	}
+	#contenedor #localizacion #masinfoloc{
+		color: red;
+		font-weight: bold;
+	}
+	#contenedor #localizacion #masinfoloc:hover{
+		color: #18BCFC;
+	}
+	#contenedor #localizacion #infoloc{
+		background-color: #FFFFFF;
+		border-radius: .3em;
+		color: #222222;
+		padding: .4em;
+	}
+	#contenedor #colaboradores a{
+		display: block;
+		margin: 0 auto 1em auto;
+		width: 100%;
+	}
+	#contenedor #frm_registro_usuarios legend, #contenedor #frm_buscador legend{
+		color: #FFFFFF;
+		text-shadow: 0 0 1px #000;
+	}
+	#contenedor #frm_registro_usuarios input[type="submit"], #contenedor #frm_buscador input[type="submit"], #contenedor #frm_contacto_usuarios input[type="submit"]{
+		background-color: #FFBC33;
+		color: #222222;
+	}
+	#contenedor #frm_registro_usuarios input[type="submit"]:hover, #contenedor #frm_buscador input[type="submit"]:hover, #contenedor #frm_contacto_usuarios input[type="submit"]:hover, #contenedor #localizacion fieldset a:not(#masinfoloc):hover{
+		background-color: #222222;
+		color: #FFF;
+	}
+	#contenedor #biblioteca #libros p{
+		display: none;
+	}
+	#contenedor #libros{
+		display: block;
+		margin: 0 auto;
+	}
+	#contenedor #biblioteca .paginador{
+		margin-bottom: 1em;
+	}
+	#contenedor #biblioteca #libros td{
+		border-bottom-width: 1em;
+	}
+	#contenedor #biblioteca .paginador ul li{
+		margin: .5em .1em;
+	}
+	#contenedor #biblioteca figure{
+		width: 100%;
+	}
+	#contenedor #biblioteca figure img{
+		width: 60%;
+	}
+	#contenedor #biblioteca figure figcaption{
+		margin-bottom: 1em;
+		padding-left: 0em;
+		width: 100%;
+	}
+	#contenedor #biblioteca figure img{
+		margin-bottom: 1em;
+	}
+	#pie section{
+		display: block;
+		margin: 0 auto;
+		width: 90%;
+	}
+	#pie section:nth-child(2){
+		margin: .5em auto;
+	}
+	#pie section:nth-child(1){
+		display: none;
+	}
+}
+/*** Termina Declaración de Media Queries Diseño Responsivo ***/
+
+
+
+
+
+
