@@ -1,0 +1,15 @@
+Bienvenido a Biblioteca Digital - PSEDUCA IT.
+
+Instrucciones de instalación:
+*****************************************************************
+
+1. Abrir la carpeta "db" e importar el archivo "bibliotecaIT.sql" a su Servidor de Base de Datos MySQL.
+2. Editar el archivo "conexion.php" (con los valores establecidos en su servidor de base de datos) situado con la subcarpeta "config" .
+3. Listo....!
+
+
+--------------
+Desarrollado por: Alejandro González Reyes
+Co-Fundador de: phpconestilo
+Email: alejandro.gonzalez.reyes@outlook.com
+Web: http://director.io/prepajv/
