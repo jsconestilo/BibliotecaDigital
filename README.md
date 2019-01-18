@@ -19,6 +19,10 @@ La **Biblioteca Digital** del Centro de Bachillerato José Vasconcelos SC. Tiene
 * Fresco [Link](http://www.frescojs.com/)
 * jQuery and CSS3 Simple Tooltip [Link](http://www.htmldrive.net/items/show/681/jQuery-and-CSS3-Simple-tooltip)
 
+### Instrucciones de Instalación
+
+Revisar el archivo adjunto leéme.txt
+
 ### Descripción de las Secciones del Sitio
 
 **1. Página de Home**
