@@ -12,6 +12,7 @@ La **Biblioteca Digital** del Centro de Bachillerato José Vasconcelos SC. Tiene
 | CSS-3                  |         			                  |
 | JavaScript (jQuery)    |                                    |
 | Responsive Web Design  |                                    |
+| Ajax			         |                                    |
 
 ### Recursos y Componentes de Terceros
 
