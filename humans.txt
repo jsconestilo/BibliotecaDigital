@@ -1,0 +1,26 @@
+﻿/* Biblioteca Digital - PSEDUCA IT. */
+/* Centro de Bachillerato José Vasconcelos SC. */
+
+/* TEAM */
+Fundador: Alejandro González Reyes
+Site: http://director.io/prepajv/biblioteca/
+Contacto: alejandro.gonzalez.reyes[at]outlook.com
+Twitter: @lia_alejandro
+Location: Toluca, México
+
+/* THANKS */
+http://www.videotutoriales.com
+http://www.desarrolloweb.com
+http://www.cristalab.com
+http://www.video2brain.com
+http://www.codigofacilito.com
+@jonmircha
+
+/* SITE */
+Last update: 2013/11/30
+Language: Español
+Standars: HTML5, CSS3, JavaScript, PHP, jQuery, MySQL
+Components: Responsive Web Design, Google Maps, Fresco, Meteor-Slideshow, Toltip CSS3
+Software: SublimeText2, Adobe Fireworks
+
+/* http://humanstxt.org */
