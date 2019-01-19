@@ -6,13 +6,13 @@ La **Biblioteca Digital** del Centro de Bachillerato José Vasconcelos SC. Tiene
 
 ### Tecnologías Web Implementadas en el Proyecto
 
-| Frontend               | Backend | Gestor de Bases de Datos |
-| ---------------------- | ------- | ------------------------ |
-| HTML-5                 | PHP 7   | MySQL 5 			      |
-| CSS-3                  |         			                  |
-| JavaScript (jQuery)    |                                    |
-| Responsive Web Design  |                                    |
-| Ajax			         |                                    |
+| Frontend               | Backend				   | Gestor de Bases de Datos |
+| ---------------------- | ----------------------- | ------------------------ |
+| HTML-5                 | PHP 7 (No Frameworks)   | MySQL 5 			      |
+| CSS-3                  |         			       	   			              |
+| JavaScript (jQuery)    |         				                              |
+| Responsive Web Design  |                      				              |
+| Ajax			         |        				                              |
 
 ### Recursos y Componentes de Terceros
 
@@ -23,6 +23,10 @@ La **Biblioteca Digital** del Centro de Bachillerato José Vasconcelos SC. Tiene
 ### Instrucciones de Instalación
 
 Revisar el archivo adjunto leéme.txt
+
+### Enlace Proyecto en Producción
+
+[http://biblioteca-digital.xpsmart.com.mx/](http://biblioteca-digital.xpsmart.com.mx/)
 
 ### Descripción de las Secciones del Sitio
 
